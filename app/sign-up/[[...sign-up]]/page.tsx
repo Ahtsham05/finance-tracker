@@ -5,8 +5,8 @@ import { Loader2 } from 'lucide-react'
 export default function Page() {
   return (
     <>
-      <div className='grid grid-cols-1 lg:grid-cols-2 p-5 w-full min-h-screen'>
-        <div className='flex items-center justify-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen'>
+        <div className='flex items-center justify-center p-5'>
           <ClerkLoading>
             <Loader2 className='h-8 w-8 animate-spin' />
           </ClerkLoading>

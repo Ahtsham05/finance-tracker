@@ -1,6 +1,6 @@
 {
-  "id": "7a3a7994-ced8-4ef2-b4e8-dd49891d9d2c",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "da90cf57-361c-4d79-820c-91d35d2dac7c",
+  "prevId": "7a3a7994-ced8-4ef2-b4e8-dd49891d9d2c",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -31,6 +31,13 @@
           "type": "varchar",
           "primaryKey": false,
           "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'active'"
         }
       },
       "indexes": {},
