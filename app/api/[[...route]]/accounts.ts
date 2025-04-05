@@ -10,7 +10,10 @@ const app = new Hono()
         const auth = getAuth(c)
         if(!auth?.userId){
             return c.json({
-                error: 'Unauthorized Access denied'
+                data : null,
+                message: 'Unauthorized access',
+                success: false,
+                error: true
             }, 401)
         }
         const data = await db.select({
@@ -19,7 +22,12 @@ const app = new Hono()
         })
         .from(accounts)
         // .where(eq(accounts.userId, auth?.userId))
-        return c.json({data})
+        return c.json({
+            data,
+            message: 'Accounts fetched successfully',
+            success: true,
+            error: false
+        })
     })
 
 export default app
